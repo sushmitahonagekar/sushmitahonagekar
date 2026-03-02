@@ -1,5 +1,6 @@
 💫About Me:
-🔭 I'm studying in Gogte Institute of Technology,belagavi <br>⚡ software Engineering
+🔭 I'm studying in Gogte Institute of Technology,belagavi <br>
+⚡ software Engineering
 
 
 🌐Socials:
