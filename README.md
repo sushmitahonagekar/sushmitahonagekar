@@ -1,49 +1,44 @@
 <div align="center">
 
-<img src="assets/header.svg" alt="header" />
+<img src="assets/header.svg" alt="Sushmita Honagekar" width="100%"/>
 
 <br/>
 
-![Status](https://img.shields.io/badge/STATUS-OPEN_TO_INTERNSHIPS-00ff9c?style=for-the-badge&labelColor=0d1117)
-![Location](https://img.shields.io/badge/LOCATION-BELAGAVI,_INDIA-00ff9c?style=for-the-badge&labelColor=0d1117)
-
-<br/><br/>
-
-<img src="assets/whoami.svg" alt="whoami" />
-
-<br/>
-
-![Java](https://img.shields.io/badge/Java-0d1117?style=for-the-badge&logo=openjdk&logoColor=00ff9c)
-![Python](https://img.shields.io/badge/Python-0d1117?style=for-the-badge&logo=python&logoColor=00ff9c)
-![SQL](https://img.shields.io/badge/SQL-0d1117?style=for-the-badge&logo=mysql&logoColor=00ff9c)
-![HTML5](https://img.shields.io/badge/HTML5-0d1117?style=for-the-badge&logo=html5&logoColor=00ff9c)
-![CSS3](https://img.shields.io/badge/CSS3-0d1117?style=for-the-badge&logo=css3&logoColor=00ff9c)
-![JavaScript](https://img.shields.io/badge/JavaScript-0d1117?style=for-the-badge&logo=javascript&logoColor=00ff9c)
-![Git](https://img.shields.io/badge/Git-0d1117?style=for-the-badge&logo=git&logoColor=00ff9c)
-![GitHub](https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=00ff9c)
-![VS Code](https://img.shields.io/badge/VS_Code-0d1117?style=for-the-badge&logo=visualstudiocode&logoColor=00ff9c)
-
-<br/>
-
-<img src="assets/skills.svg" alt="skills" />
-<br/><br/>
-<img src="assets/career.svg" alt="career" />
-<br/><br/>
-<img src="assets/education.svg" alt="education" />
-<br/><br/>
-<img src="assets/achievements.svg" alt="achievements" />
-
-<br/><br/>
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=sushmitahonagekar&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff9c&icon_color=00ff9c&text_color=c9d1d9" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sushmitahonagekar&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff9c&text_color=c9d1d9" />
-
-<br/>
-
-[![Portfolio](https://img.shields.io/badge/PORTFOLIO-0d1117?style=for-the-badge&logo=googlechrome&logoColor=00ff9c)](https://sushmitahonagekar.github.io/portfolio)
-[![Email](https://img.shields.io/badge/EMAIL-0d1117?style=for-the-badge&logo=gmail&logoColor=00ff9c)](mailto:sushmitahonagekar@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-0d1117?style=for-the-badge&logo=linkedin&logoColor=00ff9c)](https://www.linkedin.com/)
-
-<img src="assets/footer.svg" alt="footer" />
+<img src="https://img.shields.io/badge/BE_ISE-3rd_Year-ff4d8d?style=flat-square&labelColor=1b1340" alt="year"/>
+<img src="https://img.shields.io/badge/Full--Stack_Intern-GRID_2026-2ee6c5?style=flat-square&labelColor=1b1340" alt="intern"/>
+<img src="https://img.shields.io/badge/Open_to-Internships-ffa62b?style=flat-square&labelColor=1b1340" alt="open"/>
 
 </div>
+
+<br/>
+
+<img src="assets/about.svg" alt="About me" width="100%"/>
+
+<br/>
+
+<img src="assets/skills.svg" alt="Skills" width="100%"/>
+
+<br/>
+
+<img src="assets/experience.svg" alt="Experience" width="100%"/>
+
+<br/>
+
+<img src="assets/education.svg" alt="Education" width="100%"/>
+
+<br/>
+
+<img src="assets/recognition.svg" alt="Leadership and recognition" width="100%"/>
+
+<br/>
+
+<div align="center">
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-ff4d8d?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=1b1340)](https://sushmitahonagekar.github.io/portfolio)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-ffa62b?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=1b1340)](https://www.linkedin.com/)
+[![Email](https://img.shields.io/badge/Email-2ee6c5?style=for-the-badge&logo=gmail&logoColor=white&labelColor=1b1340)](mailto:sushmitahonagekar@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-b79bff?style=for-the-badge&logo=github&logoColor=white&labelColor=1b1340)](https://github.com/sushmitahonagekar)
+
+</div>
+
+<img src="assets/footer.svg" alt="Thanks for stopping by" width="100%"/>
