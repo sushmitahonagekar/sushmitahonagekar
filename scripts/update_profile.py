@@ -1,42 +1,17 @@
-Claude
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Update profile · PY
 #!/usr/bin/env python3
-"""Refresh the live streak + heatmap section inside assets/profile.svg.
- 
+"""Refresh the live streak section inside assets/profile.svg.
+
 Usage:  python scripts/update_profile.py assets/profile.svg sushmitahonagekar
 Needs only the Python standard library. Reads your PUBLIC contribution
 calendar from GitHub, so no token is required.
 """
 import re, sys, datetime as dt, urllib.request
- 
+
 FONT = "'DejaVu Sans Mono',Consolas,Menlo,'Courier New',monospace"
 RED, VIO, WHT, DIM = "#ff2b4d", "#8b5cf6", "#f4f0ff", "#8f86ad"
 LEVELS = ["#261a3c", "#4b2a85", "#8b5cf6", "#ff5c7a", "#ff2b4d"]
- 
- 
+
+
 def fetch_days(user):
     req = urllib.request.Request(
         f"https://github.com/users/{user}/contributions",
@@ -50,8 +25,8 @@ def fetch_days(user):
             m = re.match(r"(\d+) contribution", txt.strip())
             days[id_to_date[i]] = int(m.group(1)) if m else 0
     return sorted((dt.date.fromisoformat(d), c) for d, c in days.items())
- 
- 
+
+
 def stats(days):
     total = sum(c for _, c in days)
     longest = (0, None, None); run = 0; start = None
@@ -69,18 +44,18 @@ def stats(days):
     while idx >= 0 and days[idx][1] > 0:
         cur += 1; cstart = days[idx][0]; idx -= 1
     return total, (cur, cstart, cend if cur else None), longest
- 
- 
+
+
 def fmt(a, b):
     if not a: return "no streak yet"
     f = lambda d: f"{d.strftime('%b')} {d.day}"
     return f(a) if a == b else f"{f(a)} - {f(b)}"
- 
- 
+
+
 def level(c):
     return 0 if c == 0 else 1 if c <= 2 else 2 if c <= 5 else 3 if c <= 9 else 4
- 
- 
+
+
 def streak_markup(days):
     total, (cur, cs, ce), (lo, ls, le) = stats(days) if days else (0, (0, None, None), (0, None, None))
     rng = f"{days[0][0].strftime('%b')} {days[0][0].day}, {days[0][0].year} - Present" if days else ""
@@ -96,26 +71,9 @@ def streak_markup(days):
           f'from="0 500 243" to="360 500 243" dur="6s" repeatCount="indefinite"/></circle>')
     o += txt(500, 262, cur, 52, WHT, 700, True) + txt(500, 312, "Current Streak", 15, "#ffb340", 700) + txt(500, 336, fmt(cs, ce), 12, DIM)
     o += txt(800, 262, lo, 52, WHT, 700, True) + txt(800, 312, "Longest Streak", 15, RED) + txt(800, 336, fmt(ls, le), 12, DIM)
-    # heatmap
-    if days:
-        first_dow = (days[0][0].weekday() + 1) % 7
-        weeks = (len(days) + first_dow + 6) // 7
-        step = 15; x0 = (1000 - weeks * step) / 2; y0 = 372
-        for i, (d, c) in enumerate(days):
-            col, row = divmod(i + first_dow, 7)
-            lv = level(c)
-            o += (f'<rect x="{x0 + col * step:.1f}" y="{y0 + row * step}" width="12" height="12" rx="3" '
-                  f'fill="{LEVELS[lv]}"{" opacity=\".95\"" if lv else ""}/>')
-        ly = y0 + 7 * step + 22
-        o += f'<text x="{x0:.0f}" y="{ly}" font-family="{FONT}" font-size="12" fill="{DIM}">last 12 months of commits</text>'
-        lx = 1000 - x0 - 5 * 17 - 50
-        o += f'<text x="{lx:.0f}" y="{ly}" font-family="{FONT}" font-size="12" fill="{DIM}" text-anchor="end">less</text>'
-        for k, c in enumerate(LEVELS):
-            o += f'<rect x="{lx + 8 + k * 17:.0f}" y="{ly - 11}" width="12" height="12" rx="3" fill="{c}"/>'
-        o += f'<text x="{lx + 8 + 5 * 17 + 4:.0f}" y="{ly}" font-family="{FONT}" font-size="12" fill="{DIM}">more</text>'
     return o
- 
- 
+
+
 def update(svg_path, user):
     days = fetch_days(user)
     svg = open(svg_path, encoding="utf-8").read()
@@ -123,10 +81,8 @@ def update(svg_path, user):
                  lambda m: m.group(1) + streak_markup(days) + m.group(2), svg, flags=re.S)
     open(svg_path, "w", encoding="utf-8").write(new)
     print(f"updated {svg_path}: {len(days)} days, total {sum(c for _, c in days)}")
- 
- 
+
+
 if __name__ == "__main__":
     update(sys.argv[1] if len(sys.argv) > 1 else "assets/profile.svg",
            sys.argv[2] if len(sys.argv) > 2 else "sushmitahonagekar")
- 
-
